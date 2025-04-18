@@ -1,7 +1,111 @@
-/node_modules
-/dist
-/tooling/node_modules
+#
+# Project-Specific
+#
+
+/.tmp
+
+#
+# System
+#
+
+# PIDs
+*.pid
+*.seed
+*.pid.lock
+pids
+
+# File manager configs
+.directory
+Thumbs.db
+.DS_Store
+
+#
+# Generic
+#
+
+# Build directory
+dist/
+
+# tmp files
+temp/
+tmp/
+
+# Logs
+logs/
+*.log
+
+# dotenv
+.env
+.env.*
+!.env.example
+
+# SQLite DB
+*.db
+*.db-journal
+
+#
+# JavaScript
+#
+
+# NPM / package managers
+node_modules/
+.npm/
+.yarn-integrity
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Output of `npm pack`
+*.tgz
+
+# ▼▼ TODO Add this section if the project does NOT require the lock files e.g. npm packages ▼▼
+
+# Lockfiles are not required for npm packages
+pnpm-lock.yaml
+
+# ▲▲ TODO Add this section if the project does NOT require the lock files e.g. npm packages ▲▲
+
+# ▼▼ TODO Add this section if the project DOES require the lock files e.g. web apps ▼▼
+
+# npm is the package manager for this project.
+
+# ▲▲ TODO Add this section if the project DOES require the lock files e.g. web apps ▲▲
+
+package-lock.json
+yarn.lock
+bun.lockb
+npm-shrinkwrap.json
+
+# Node.js
+.node_repl_history
+
+# TypeScript
+*.tsbuildinfo
+
+# Frameworks
+.next/
+.nuxt/
+out/
+.svelte-kit/
+.astro/
+
+# Platforms
+.wrangler/
+.dev.vars
+worker-configuration.d.ts
+
+.vercel/
+.netlify/
+
+# Prisma
+/prisma/*.db
+/prisma/*.db-journal
+
+# ESLint
+.eslintcache
+
+# Cypress
 /cypress/screenshots
 /cypress/videos
-/.tmp
-.DS_Store

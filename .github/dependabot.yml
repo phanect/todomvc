@@ -1,0 +1,35 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "phanect"
+    groups:
+      compatible:
+        applies-to: "version-updates"
+        update-types:
+          - "minor"
+          - "patch"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "phanect"
+    groups:
+      normal:
+        applies-to: "version-updates"
+        patterns:
+          - "*"
+
+  # ▼▼ TODO Remove if not required ▼▼
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "phanect"
+  # ▲▲ TODO Remove if not required ▲▲
