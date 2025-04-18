@@ -1,5 +1,6 @@
 {
   "name": "framework-perf-comparison",
+  "version": "2025.4.19",
   "description": "Performance comparison of the frontend frameworks",
   "author": {
     "name": "Jumpei Ogawa",
@@ -10,16 +11,25 @@
     "url": "https://github.com/tastejs/todomvc/graphs/contributors"
   }],
   "license": "Apache-2.0",
-  "main": "server.js",
-  "files": [
-    "license.md",
-    "server.js",
-    "examples",
-    "media",
-    "site-assets",
-    "index.html",
-    "learn.json"
-  ],
+  "private": true,
+  "type": "module",
+
+  "scripts": {
+    // TODO Choose one or another
+    "dev": "vite",
+    "dev": "jiti main.ts",
+
+    "build": "vite build",
+    "lint": "tsc --noEmit && eslint",
+    "fix": "eslint --fix",
+
+    // TODO Add this if the project is an npm package
+    "release": "npm publish --access public --non-interactive",
+
+    "test": "vitest run",
+    "clean": "git clean -dX --exclude=\"!.env\" --force",
+    "refresh": "pnpm run clean && rm --force ./pnpm-lock.yaml && corepack up && pnpm install"
+  },
   "scripts": {
     "test-server": "gulp test-server &",
     "server": "gulp test-server",
@@ -37,10 +47,13 @@
   },
   "devDependencies": {
     "@bahmutov/print-env": "^1.0.1",
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "@phanect/configs": "latest",
     "@phanect/lint": "latest",
     "@phanect/lint-react": "latest",
     "@phanect/lint-svelte": "latest",
     "@phanect/lint-vue": "latest",
+    "@types/node": "^22.5.5",
     "bluebird": "^3.5.1",
     "chalk": "^2.3.0",
     "console.table": "^0.9.1",
@@ -52,7 +65,6 @@
     "gulp-autoprefixer": "^1.0.1",
     "gulp-cache": "^0.2.0",
     "gulp-if": "^1.2.1",
-    "gulp-imagemin": "3.0.0",
     "gulp-load-plugins": "^0.7.0",
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.4.0",
@@ -60,6 +72,7 @@
     "gulp-uncss": "^0.5.0",
     "gulp-useref": "^1.0.2",
     "gulp-vulcanize": "^1.0.0",
+    "jiti": "latest",
     "minimist": "^1.2.0",
     "npm-run-all": "^4.1.2",
     "pluralize": "^7.0.0",
@@ -68,7 +81,11 @@
     "run-sequence": "^1.0.1",
     "serve-favicon": "^2.3.0",
     "start-server-and-test": "^1.0.0",
-    "vinyl-fs": "github:gulpjs/vinyl-fs#59386ca"
+    "typescript": "^5.6.2",
+    "vinyl-fs": "github:gulpjs/vinyl-fs#59386ca",
+    "vite": "^6.0.2",
+    "vitest": "^3.0.2",
+    "wrangler": "^4.0.0"
   },
   "engines": {
     "node": "22.x",
