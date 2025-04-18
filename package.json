@@ -1,9 +1,6 @@
 {
   "name": "todomvc",
   "version": "0.1.2",
-  "engines": {
-    "node": "8.17.0"
-  },
   "main": "server.js",
   "files": [
     "license.md",
@@ -59,5 +56,8 @@
     "serve-favicon": "^2.3.0",
     "start-server-and-test": "^1.0.0",
     "vinyl-fs": "github:gulpjs/vinyl-fs#59386ca"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
