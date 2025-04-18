@@ -1,6 +1,14 @@
 {
-  "name": "todomvc",
-  "version": "0.1.2",
+  "name": "framework-perf-comparison",
+  "description": "Performance comparison of the frontend frameworks",
+  "author": {
+    "name": "Jumpei Ogawa",
+    "url": "https://phanective.org"
+  },
+  "contributors": [{
+    "name": "The TodoMVC contributors",
+    "url": "https://github.com/tastejs/todomvc/graphs/contributors"
+  }],
   "license": "Apache-2.0",
   "main": "server.js",
   "files": [
